@@ -1,10 +1,13 @@
 import PostImage from "@/components/PostImage";
 import PostSummary from "../PostSummary";
+import { findAllPublicPost } from "@/lib/post/queries";
 
-export default function PostFeatured() {
 
-    const slug = "NOP"
-    const postLink = `/post/${slug}`
+export default async function  PostFeatured ()  {
+    const posts = await findAllPublicPost()
+
+    const post = posts[0];
+    const postLink = `/post/${post.slug}`
     return (
 
         <section className="grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group" >
@@ -17,9 +20,9 @@ export default function PostFeatured() {
             <PostSummary
                 postLink={postLink}
                 postHeading='h1'
-                createdAt={'2025-01-07T22:54:10'}
-                excerpt={'o Next.js já vem com várias decisões prontas, permitindo que você comece a desenvolver mais rapidamente.'}
-                title={'10 hábitos para aumentar sua produtividade'}
+                createdAt={post.createdAt}
+                excerpt={post.excerpt}
+                title={post.title}
             />
         </section>
     )
