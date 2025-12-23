@@ -1,12 +1,13 @@
 
-import { findAllPublicPost } from "@/lib/post/queries"
+import { findAllPublicPostCache } from "@/lib/post/queries"
 import PostImage from "../PostImage"
 import PostSummary from "../PostSummary"
+import { FormateRelativeDate } from "@/utils/formate-datetime"
 
 
 export default async function PostList() {
 
-    const posts = await findAllPublicPost()
+    const posts = await findAllPublicPostCache()
 
     return (
 
@@ -18,13 +19,14 @@ export default async function PostList() {
                 return (
                     <div key={post.id} className="flex flex-col gap-4 group">
 
-                        <PostImage
-                            href={postLink}
-                            src={post.coverImageUrl}
-                            alt={post.title}
-                            width={1200}
-                            height={720}
-                        />
+                     <PostImage
+  href={postLink}
+  src={post.coverImageUrl}
+  alt={post.title}
+  width={1200}
+  height={720}
+  date={FormateRelativeDate(post.createdAt)} // ← aqui
+/>
 
                         <PostSummary
                         postLink={postLink}
@@ -36,6 +38,8 @@ export default async function PostList() {
 
 
                         />
+
+
 
                     </div>
                 )

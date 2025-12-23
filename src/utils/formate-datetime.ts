@@ -1,27 +1,11 @@
-import { format, formatDistanceToNow } from "date-fns";
+import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
+export function FormateRelativeDate(rawDate: string): string {
+  const date = new Date(rawDate);
 
-export function FormateDateTime (rawDate : string): string {
+  const formatted = format(date, "dd MMMM", { locale: ptBR });
+  const [dia, mes] = formatted.split(" ");
 
-const date = new Date(rawDate);
-    return (
-        format(date, "dd/MM/yyy 'às' HH/'h'mm ", {
-            locale: ptBR
-        })
-    )
+  return `${dia} ${mes.slice(0, 3)}`;
 }
-
-export function FormateRelativeDate (rawDate : string) : string {
-    const date  = new Date (rawDate);
-
-    return (
-        formatDistanceToNow(date , {
-            locale: ptBR,
-            addSuffix: true
-        })
-      )
-
-}
-
-
