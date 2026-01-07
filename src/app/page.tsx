@@ -7,16 +7,12 @@ import Header from "@/components/Header";
 
 
 export default function Homepage() {
+
+
     return (
 
         <>
             <>
-
-                <Suspense fallback={<SpinLoader className="h-screen bg-gray-100" />}>
-                    <Header />
-                </Suspense>
-
-
                 <Suspense fallback={<SpinLoader className="h-screen bg-gray-100" />}>
                     <PostFeatured />
                 </Suspense><Suspense

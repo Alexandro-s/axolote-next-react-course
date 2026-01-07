@@ -22,7 +22,6 @@ export default function PostSummary ({ postHeading, createdAt, title, excerpt, p
 
                         <div className="flex flex-col gap-4 sm:justify-center">
 
-                            <time className="text-slate-600 block text-sm/tight">{FormateRelativeDate(createdAt)}</time>
 
                             <PostHeading as={postHeading} url={postLink}>
                                 {title}

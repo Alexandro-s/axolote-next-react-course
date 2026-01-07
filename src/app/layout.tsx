@@ -4,6 +4,19 @@ import { Poppins } from "next/font/google";
 import Container from "@/components/Container";
 import Header from "@/components/Header";
 // import Footer from "@/components/Footer"
+// app/layout.tsx
+import { Playfair_Display, Montserrat } from "next/font/google";
+
+export const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 
 
 
@@ -29,7 +42,8 @@ export default function RootLayout({
         <html lang="pt-BR">
             <body className={poppins.className} >
                 <Container>
-               
+                    <Header />
+
                     {children}
 
 

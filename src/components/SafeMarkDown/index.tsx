@@ -38,4 +38,4 @@ export default function SafeMarkDown ({markdown} : SafeMarkDownProps) {
 // Apenas outro retorno
 // Esse que traz uma div com a class overflow-x-auto
 // Dentro dela uma tag table estilo componentes
-// Recebendo class w-full min-w-600px e as props
+// Recebendo class w-full min-w-600px e as props 

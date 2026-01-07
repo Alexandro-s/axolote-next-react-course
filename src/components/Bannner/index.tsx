@@ -27,7 +27,7 @@ export default function Banner() {
             />
 
             <div className="absolute inset-0 bg-black/60">
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white space-y-4">
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-black space-y-4">
 
         <h2 className="text-2xl md:text-4xl font-bold">
           Let's Explore With Us

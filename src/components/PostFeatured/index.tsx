@@ -1,6 +1,7 @@
 import PostImage from "@/components/PostImage";
 import PostSummary from "../PostSummary";
 import { findAllPublicPostCache } from "@/lib/post/queries";
+import { montserrat, playfair } from "@/app/layout";
 
 
 export default async function  PostFeatured ()  {
@@ -13,9 +14,9 @@ export default async function  PostFeatured ()  {
         <section className=" text-center pt-16 mb-16 sm:grid-cols-2 group" >
 
 
-                <span className="textt-white/60 text-sm tracking-wide">Siga</span>
-                <h1 className="mt-2 text-4xl sm:text-5xl font-light tracking-wide text-white">Explore & Descubra</h1>
-                <p className="mt-4 text-white/60 max-w-2xl mx-auto text-sm sm:text-base">Olhe novamente para esse ponto. Ele é aqui. Ele é o nosso lar. Ele somos nós</p>
+                <span className={`${montserrat.className}text-black/60 text-sm tracking-wide`}>Siga</span>
+                <h1 className={`${playfair.className} mt-2 text-4xl sm:text-5xl  tracking-wide `}>Explore & Descubra</h1>
+                <p className={` ${montserrat.className} mt-4 text-black/60 max-w-2xl mx-auto text-sm sm:text-base`}>Olhe novamente para esse ponto. Ele é aqui. Ele é o nosso lar. Ele somos nós</p>
 
 
         </section>

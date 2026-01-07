@@ -42,7 +42,7 @@ export default function PostImage({
         translate-x-[-25%] translate-y-[25%]
         w-14 h-14
         bg-white text-black
-        rounded-full
+
         flex flex-col items-center justify-center
         shadow-lg
         z-20
