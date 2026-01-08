@@ -9,7 +9,7 @@ export default function PostHeading ({url, children, as : Tag = 'h2' }: PostHead
 
     const headingClassMap = {
     h1: ` text-lg font-semibold text-sm sm:text-4xl `,
-    h2: ` ${montserrat.className} font-poppins text-lg font-semibold tracking-wide border-b border-red-200`,
+    h2: ` ${montserrat.className} text-lg font-bold leading-snug `,
     p: `text-sm text-gray-400`
 }
 

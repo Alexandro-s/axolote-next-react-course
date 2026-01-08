@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 // import Footer from "@/components/Footer"
 // app/layout.tsx
 import { Playfair_Display, Montserrat } from "next/font/google";
+import Footer from "@/components/Footer";
 
 export const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -45,6 +46,8 @@ export default function RootLayout({
                     <Header />
 
                     {children}
+
+                    <Footer />
 
 
                 </Container>

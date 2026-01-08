@@ -9,7 +9,7 @@ type PostImageProps = {
   width: number
   height: number
   className?: string
-  date?: string           // ⬅ ADICIONAR A DATA AQUI
+  date?: string
 }
 
 export default function PostImage({
@@ -24,7 +24,7 @@ export default function PostImage({
   return (
    <Link href={href}>
   <div className="relative aspect-video overflow-hidden group">
-    {/* IMAGEM */}
+
     <Image
       src={src}
       width={width}
@@ -34,7 +34,7 @@ export default function PostImage({
       className="object-cover object-center w-full h-full transition-transform duration-300 group-hover:scale-105"
     />
 
-    {/* CÍRCULO DE DATA */}
+   
    { date && <div
       className="
         absolute

@@ -1,15 +1,16 @@
-import { FormateRelativeDate} from "../../utils/formate-datetime"
+import { montserrat } from "@/app/layout"
+import { FormateRelativeDate } from "../../utils/formate-datetime"
 import PostHeading from "../PostHeading"
 
 
 
 
 type PostSummaryProps = {
-    postHeading : 'h1' | 'h2' | 'p',
-    createdAt : string,
-    title : string,
-    excerpt : string
-    postLink : string
+    postHeading: 'h1' | 'h2' | 'p',
+    createdAt: string,
+    title: string,
+    excerpt: string
+    postLink: string
 
 
 
@@ -17,23 +18,21 @@ type PostSummaryProps = {
 }
 
 
-export default function PostSummary ({ postHeading, createdAt, title, excerpt, postLink } : PostSummaryProps) {
+export default function PostSummary({ postHeading,title, excerpt, postLink }: PostSummaryProps) {
     return (
 
-                        <div className="flex flex-col gap-4 sm:justify-center">
+        <div className="flex flex-col">
+            <div className="min-h-[50px]">
+                <PostHeading as={postHeading} url={postLink}>
+                    {title}
+                </PostHeading>
+                 </div>
+                <div className="w-12 h-[2px] bg-red-500 my-4" />
+                <p className={`${montserrat.className} text-sm leading-relaxed`}>
+                    {excerpt}
+                </p>
 
-
-                            <PostHeading as={postHeading} url={postLink}>
-                                {title}
-                            </PostHeading>
-
-                            <p>
-                                {excerpt}
-                            </p>
-
-
-
-                        </div>
+        </div>
     )
 
 }
