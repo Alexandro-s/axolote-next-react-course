@@ -11,7 +11,7 @@ export type PostModel = {
   updatedAt: string,
   author: string
 
-};;
+};
 
 
 

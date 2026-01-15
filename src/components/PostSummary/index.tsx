@@ -1,5 +1,4 @@
 import { montserrat } from "@/app/layout"
-import { FormateRelativeDate } from "../../utils/formate-datetime"
 import PostHeading from "../PostHeading"
 
 

@@ -27,6 +27,11 @@ export class JsonPostRepository implements PostRepository {
 
     };
 
+    async findAll(): Promise<PostModel[]> {
+        const posts = await this.readFromDisk();
+        return posts;
+    }
+
     async findAllPublic(): Promise<PostModel[]> {
 
 
@@ -60,14 +65,4 @@ export class JsonPostRepository implements PostRepository {
 
 
 
-
-// (async () => {
-//    const posts = await postRepository.findAll()
-//    posts.forEach(post => {
-//     console.log(post.id)
-//    })
-
-
-
-// })();
 

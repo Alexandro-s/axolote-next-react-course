@@ -29,7 +29,7 @@ export default async function PostList() {
   alt={post.title}
   width={1200}
   height={720}
-  date={FormateRelativeDate(post.createdAt)} 
+  date={FormateRelativeDate(post.createdAt)}
 />
                         <PostSummary
                         postLink={postLink}
@@ -51,8 +51,5 @@ export default async function PostList() {
        </section>
 
     )
-}
-function findAllPublic() {
-    throw new Error("Function not implemented.")
 }
 
